@@ -38,10 +38,10 @@ const ThreeScene = ({ loading, onLoadingComplete }) => {
     controls.enableZoom = false;
 
   // Limit the rotation angles
-  controls.minAzimuthAngle = -Math.PI / 4; // Minimum rotation angle in radians (45 degrees)
-  controls.maxAzimuthAngle = Math.PI / 4;  // Maximum rotation angle in radians (45 degrees)
+  controls.minAzimuthAngle = -0.6; // Minimum rotation angle in radians (45 degrees)
+  controls.maxAzimuthAngle = 0.6;  // Maximum rotation angle in radians (45 degrees)
   controls.minPolarAngle = 1.5;    // Minimum vertical angle in radians (30 degrees)
-  controls.maxPolarAngle = 1.8 ; // Maximum vertical angle in radians (120 degrees)
+  controls.maxPolarAngle = 1.64 ; // Maximum vertical angle in radians (120 degrees)
 
 
  // Ambient Light
