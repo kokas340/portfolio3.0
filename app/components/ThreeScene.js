@@ -78,15 +78,15 @@ scene.add(directionalLight2.target); //
       scene.add(model);
       onLoadingComplete(); 
       // PopUp animation
-      gsap.to(model.scale, { x: 1, y: 1, z: 1, duration: 0.5, delay: 0 });
+      gsap.to(model.scale, { x: 1, y: 1, z: 1, duration: 0.4, delay: 0 });
       
     });
 
 
     // Resize
     window.addEventListener('resize', () => {
-      sizes.width = window.innerWidth / 2;
-      sizes.height = window.innerHeight / 2;
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
       renderer.setSize(sizes.width, sizes.height);
