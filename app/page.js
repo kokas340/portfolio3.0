@@ -1,11 +1,11 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import ThreeScene from './components/ThreeScene';
+import AboutMesh from './components/mesh/AboutMesh';
 import Loader from './components/Loader';
-import Intro from './components/Intro';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
+import Intro from './components/sections/Intro';
+import Education from './components/sections/Education';
+import Experience from './components/sections/Experience';
+import Projects from './components/sections/Projects';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -23,8 +23,8 @@ export default function Home() {
 
 
   return (
-    <main class="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
-      <section class="snap-start bg-teal-800 w-screen h-screen ">
+    <main class="font-mono snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
+      <section class="snap-start  w-screen h-screen ">
      
         {loading ? (
           <Loader></Loader>
@@ -32,18 +32,18 @@ export default function Home() {
           <Intro ></Intro>
         )}
       </section>
-      <section id="about"class="snap-start bg-teal-800 w-screen  h-screen ">
+      <section id="about"class="snap-start  w-screen  h-screen ">
          
-          <ThreeScene loading={loading} onLoadingComplete={handleLoadingComplete} />
+          <AboutMesh loading={loading} onLoadingComplete={handleLoadingComplete} />
         <canvas className={"webgl"}></canvas>
       </section>
-      <section id="education" class="snap-start bg-teal-800 w-screen h-screen ">
+      <section id="education" class="snap-start  w-screen h-screen ">
           <Education></Education>
       </section>
-      <section id="experience" class="snap-start bg-teal-800 w-screen h-screen ">
+      <section id="experience" class="snap-start  w-screen h-screen ">
           <Experience></Experience>
       </section>
-      <section id="projects" class="snap-start bg-teal-800 w-screen h-screen ">
+      <section id="projects" class="snap-start  w-screen h-screen ">
     <Projects></Projects>
       </section>
     </main>

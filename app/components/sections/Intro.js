@@ -1,4 +1,4 @@
-import Desktop2 from "./Desktop2";
+import Desktop2 from "../mesh/IntroMesh";
 
 const Intro = () => {
 
