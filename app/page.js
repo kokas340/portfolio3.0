@@ -23,7 +23,7 @@ export default function Home() {
 
 
   return (
-    <main class="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden loading">
+    <main class="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
       <section class="snap-start bg-teal-800 w-screen h-screen ">
      
         {loading ? (

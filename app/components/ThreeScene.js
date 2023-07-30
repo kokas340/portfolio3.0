@@ -44,11 +44,11 @@ const ThreeScene = ({ onLoadingComplete }) => {
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
 
-    const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.6);
+    const directionalLight3 = new THREE.DirectionalLight(0xEDEADE, 0.6);
     directionalLight3.position.set(23, 0, 25);
     scene.add(directionalLight3);
    
-    const directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.6);
+    const directionalLight4 = new THREE.DirectionalLight(0xEDEADe, 0.6);
     directionalLight4.position.set( 5, 10, 5);
     scene.add(directionalLight4);
     // Point Light
@@ -82,6 +82,7 @@ const ThreeScene = ({ onLoadingComplete }) => {
       requestAnimationFrame(loop);
     };
     loop();
+   
   }, []);
 
   // Return null as the Three.js scene is rendered directly onto the DOM element added by useEffect
