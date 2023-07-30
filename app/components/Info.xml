@@ -1,0 +1,14 @@
+<!-- Welcome &#128075; -->
+<!-- 
+    Experienced programmer with a Technical Degree in programming 
+    and currently pursuing Software Engineering. 
+    Seeking a challenging role as a Software Engineer to 
+    apply skills and gain valuable experience.
+ -->
+<user>
+    <id>1</id>
+    <name>Jack Spinola</name>
+    <age>20</age>
+    <adress>Horsens, Denmark</adress>
+    <currently_studying>Software Engineering</currently_studying>
+</user>

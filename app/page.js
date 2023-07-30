@@ -1,9 +1,11 @@
 "use client"
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ThreeScene from './components/ThreeScene';
-import Navbar from './components/Navbar';
-import NeonBg from './components/NeonBg';
-
+import Loader from './components/Loader';
+import Intro from './components/Intro';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -14,33 +16,37 @@ export default function Home() {
 
 
   useEffect(() => {
-    if (loading) {
-      document.body.style.overflow = 'hidden';
-      document.querySelector('main').setAttribute('id', '');
-    } else {
-      document.body.style.overflow = 'visible';
-      document.querySelector('main').setAttribute('id', 'container');
+    if (!loading) {
+      document.querySelector('main').classList.remove('loading');
     }
   }, [loading]);
+
+
   return (
-    <main id="container" className='delscorl'>
-    <section class=" h-screen mb-7">
-    <ThreeScene loading={loading} onLoadingComplete={handleLoadingComplete} />
+    <main class="snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden loading">
+      <section class="snap-start bg-teal-800 w-screen h-screen ">
+     
+        {loading ? (
+          <Loader></Loader>
+        ):(
+          <Intro ></Intro>
+        )}
+      </section>
+      <section id="about"class="snap-start bg-teal-800 w-screen  h-screen ">
+         
+          <ThreeScene loading={loading} onLoadingComplete={handleLoadingComplete} />
         <canvas className={"webgl"}></canvas>
-    {loading && (
-        <svg width="200" height="200" viewBox="0 0 100 100">
-        <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-        <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-        <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
-        <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
-      </svg>
-      )}
-   
-    </section>
-    <section class=" h-screen">
-    <h1 id="intoText" className="text-4xl font-bold ">Welcome to Our Website</h1>
-    </section>
-    
-  </main>
+      </section>
+      <section id="education" class="snap-start bg-teal-800 w-screen h-screen ">
+          <Education></Education>
+      </section>
+      <section id="experience" class="snap-start bg-teal-800 w-screen h-screen ">
+          <Experience></Experience>
+      </section>
+      <section id="projects" class="snap-start bg-teal-800 w-screen h-screen ">
+    <Projects></Projects>
+      </section>
+    </main>
+
   );
 }

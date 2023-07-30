@@ -15,28 +15,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-.delscorl{
-  overflow: hidden;
-}
-section{
-  scroll-snap-align: start;
-}
-.marginRightHeader{
-  padding-right: 20%;
-}
-.marginLeftHeader{
-  padding-left: 20%;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-.delscorl{
-  overflow: hidden;
+.loading{
+  overflow-y: hidden;
+
 }
 body {
-  position: relative;
-overflow-y: hidden;
-  
   margin: 0;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -135,19 +118,3 @@ svg {
   75% { stroke: #78325a; }
   99% { stroke: #78325a; }
 }
-#container {
-
-  aspect-ratio: 2/1;
-  margin: auto;
-  border: solid black 2px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  white-space: nowrap;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth; /* Add smooth scroll behavior */
-  transition: scroll-snap-align 3s ease-in-out; /* Add transition for smooth snap align */
-  -webkit-overflow-scrolling: touch; 
-}
-
-
-
