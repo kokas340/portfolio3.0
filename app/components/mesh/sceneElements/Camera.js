@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-export const createCamera = (sizes, canvas,prespec,x,y,z) => {
+export const createCamera = (sizes, canvas,prespec,x,y,z,mx,px,my,py) => {
   const camera = new THREE.PerspectiveCamera(prespec, sizes.width / sizes.height, 0.1, 100);
   camera.position.x = x;
   camera.position.y = y;
@@ -13,10 +13,10 @@ export const createCamera = (sizes, canvas,prespec,x,y,z) => {
   controls.enableZoom = false;
 
   // Limit the rotation angles
-  controls.minAzimuthAngle = -0.1; // Minimum rotation angle in radians (45 degrees)
-  controls.maxAzimuthAngle = 0.1;  // Maximum rotation angle in radians (45 degrees)
-  controls.minPolarAngle = 1.0;    // Minimum vertical angle in radians (30 degrees)
-  controls.maxPolarAngle = 1.6;    // Maximum vertical angle in radians (120 degrees)
+  controls.minAzimuthAngle = mx; // Minimum rotation angle in radians (45 degrees)
+  controls.maxAzimuthAngle = px;  // Maximum rotation angle in radians (45 degrees)
+  controls.minPolarAngle = my;    // Minimum vertical angle in radians (30 degrees)
+  controls.maxPolarAngle = py;    // Maximum vertical angle in radians (120 degrees)
 
   return { camera, controls };
 

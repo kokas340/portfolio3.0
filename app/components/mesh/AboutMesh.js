@@ -19,7 +19,7 @@ const AboutMesh = ({ onLoadingComplete }) => {
     };
 
    // Camera && Controls
-    const { camera, controls } = createCamera(sizes,canvas,17,0,0,20);
+    const { camera, controls } = createCamera(sizes,canvas,17,0,0,20,-0.1,0.1,1,1.6);
     scene.add(camera);
 
     // Renderer
