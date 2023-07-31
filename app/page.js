@@ -13,7 +13,7 @@ export default function Home() {
   const handleLoadingComplete = () => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1000);
 
   };
   useEffect(() => {
