@@ -24,8 +24,9 @@ export const createCamera = (sizes, canvas,prespec,x,y,z,mx,px,my,py) => {
  
 export const createCameraIntro = (sizes, canvas) => {
   const camera = new THREE.PerspectiveCamera(17, sizes.width / sizes.height, 0.1, 100);
-    camera.position.z = 20;
-
+    camera.position.z = 0;
+  camera.position.x=20;
+  camera.position.y=0;
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
     controls.enablePan = false;

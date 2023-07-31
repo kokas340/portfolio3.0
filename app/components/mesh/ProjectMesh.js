@@ -34,7 +34,7 @@ const ProjectMesh = (props) => {
     const {ambientLight ,directionalLight3,directionalLight4,pointLight} = createLights();
     scene.add(ambientLight);
     scene.add(directionalLight3);
-    scene.add(directionalLight4);
+    
     scene.add(pointLight);
 
     
@@ -49,8 +49,8 @@ const ProjectMesh = (props) => {
 
     // Resize
     window.addEventListener('resize', () => {
-      sizes.width = window.innerWidth ;
-      sizes.height = window.innerHeight ;
+      sizes.width = window.innerWidth/3 ;
+      sizes.height = window.innerHeight/3 ;
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
       renderer.setSize(sizes.width, sizes.height);
