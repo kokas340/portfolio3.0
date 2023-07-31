@@ -1,25 +1,28 @@
 
 "use client"
-import React, { useEffect, useRef } from 'react';
+"use client"
+import  { useEffect } from 'react';
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { createCamera } from './sceneElements/Camera';
-import {loaderMesh} from './sceneElements/LoaderMesh';
+//components
 import { createLights } from './sceneElements/Lights';
 
-const AboutMesh = ({ onLoadingComplete }) => {
+const EpccMesh = () => {
+  
   useEffect(() => {
     // Scene
     const scene = new THREE.Scene();
     //Canvas
-    const canvas = document.querySelector('.webgl');
+    const canvas = document.querySelector('.webgl3');
     // Sizes
     const sizes = {
-      width: window.innerWidth ,
-      height: window.innerHeight ,
+      width: window.innerWidth/6 ,
+      height: window.innerHeight/4 ,
     };
 
    // Camera && Controls
-    const { camera, controls } = createCamera(sizes,canvas,17,0,0,20);
+    const { camera, controls } = createCamera(sizes,canvas,4.3,0,0,30);
     scene.add(camera);
 
     // Renderer
@@ -34,17 +37,15 @@ const AboutMesh = ({ onLoadingComplete }) => {
     scene.add(directionalLight4);
     scene.add(pointLight);
 
-    //here look
-    const loadModel = async () => {
-      try {
-        await loaderMesh(scene, "pcjack1", -Math.PI / 2, -3,false);
-        onLoadingComplete();
-      } catch (error) {
-        console.error('Error loading model:', error);
-      }
-    };
-
-    loadModel();
+    // Load glTF model
+    const loader = new GLTFLoader();
+    loader.load('/epcc.glb', (gltf) => {
+      const model = gltf.scene;
+      model.rotation.y = -Math.PI / 2;
+      model.position.y =1;
+      scene.add(model);
+      
+    });
 
     // Resize
     window.addEventListener('resize', () => {
@@ -67,4 +68,4 @@ const AboutMesh = ({ onLoadingComplete }) => {
   return null;
 };
 
-export default AboutMesh;
+export default EpccMesh;

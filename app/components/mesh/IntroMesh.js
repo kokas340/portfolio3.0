@@ -1,13 +1,11 @@
-
 "use client"
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { gsap } from 'gsap';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { createCameraIntro } from '../sceneElements/Camera';
-import { createLights, createLightsAbout } from '../sceneElements/Lights';
-const Desktop2 = () => {
+import { createCameraIntro } from './sceneElements/Camera';
+import {  createLightsAbout } from './sceneElements/Lights';
+import { runAnimationsIntro } from './sceneElements/meshAnimations';
+import {loaderMesh} from './sceneElements/LoaderMesh';
+const IntroMesh = () => {
 
   useEffect(() => {
     // Scene
@@ -30,24 +28,26 @@ const Desktop2 = () => {
     renderer.setClearColor(0x000000, 0);//rm bg 
     renderer.setSize(sizes.width, sizes.height);
 
-
+    //Lights
     const {ambientLight ,directionalLight3,directionalLight4,pointLight} = createLightsAbout();
     scene.add(ambientLight);
     scene.add(directionalLight3);
     scene.add(directionalLight4);
     scene.add(pointLight);
 
-    // Load glTF model
-    const loader = new GLTFLoader();
-    loader.load('/pcjack2.glb', (gltf) => {
-      const model = gltf.scene;
-      model.rotation.y = -Math.PI / 2;
-      model.position.y = -3;
-      scene.add(model);
-      gsap.from(model.position, { y: -10, to: { y: -3 }, duration: 4, ease: 'power2.out' });
 
-      
-    });
+ //here look
+ const loadModel = () => {
+  try {
+    loaderMesh(scene, "pcjack2", -Math.PI / 2, -3,false);
+  } catch (error) {
+    console.error('Error loading model:', error);
+  }
+};
+loadModel();
+
+
+    
 
     // Resize
     window.addEventListener('resize', () => {
@@ -65,24 +65,14 @@ const Desktop2 = () => {
       requestAnimationFrame(loop);
     };
     loop();
-    //animations
-    const tl = gsap.timeline({ defaults: { duration: 2 } });
-    tl.fromTo('.introText', { x: '-540%' }, { x: '0%' });
-    const tl2 = gsap.timeline({ defaults: { duration: 2.4 } });
-    tl2.fromTo('.about', { x: '-540%' }, { x: '0%' });
-    const tl3 = gsap.timeline({ defaults: { duration: 2.8 } });
-    tl3.fromTo('.education', { x: '-540%' }, { x: '0%' });
-    const tl4 = gsap.timeline({ defaults: { duration: 3.2 } });
-    tl4.fromTo('.experience', { x: '-540%' }, { x: '0%' });
-    const tl5 = gsap.timeline({ defaults: { duration: 3.6 } });
-    tl5.fromTo('.projects', { x: '-540%' }, { x: '0%' });
+    
+    runAnimationsIntro();
 
     
   }, []);
 
 
-  // Return null as the Three.js scene is rendered directly onto the DOM element added by useEffect
   return null;
 };
 
-export default Desktop2;
+export default IntroMesh;

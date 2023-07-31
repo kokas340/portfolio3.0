@@ -1,6 +1,7 @@
-import Desktop2 from "../mesh/IntroMesh";
+import IntroMesh from "../mesh/IntroMesh";
 
-const Intro = () => {
+const Intro = ({onLoadingComplete}) => {
+
 
 
   return (
@@ -29,7 +30,7 @@ const Intro = () => {
 
       </div>
       <div class="col-span-3">
-        <Desktop2></Desktop2>
+        <IntroMesh ></IntroMesh>
         <canvas className={"webgl2"}></canvas>
       </div>
     </div>

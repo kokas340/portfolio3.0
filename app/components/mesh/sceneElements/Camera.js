@@ -1,9 +1,11 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-export const createCamera = (sizes, canvas) => {
-  const camera = new THREE.PerspectiveCamera(17, sizes.width / sizes.height, 0.1, 100);
-  camera.position.z = 20;
+export const createCamera = (sizes, canvas,prespec,x,y,z) => {
+  const camera = new THREE.PerspectiveCamera(prespec, sizes.width / sizes.height, 0.1, 100);
+  camera.position.x = x;
+  camera.position.y = y;
+  camera.position.z = z;
 
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
@@ -38,5 +40,6 @@ export const createCameraIntro = (sizes, canvas) => {
   return { camera, controls };
 
 };
+
 
 
