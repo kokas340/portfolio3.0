@@ -1,5 +1,5 @@
 import EpccMesh from "../mesh/EpccMesh";
-
+import PhotoMesh from "../mesh/PhotoMesh";
 const Education = () => {
   return (
     <>
@@ -14,15 +14,19 @@ const Education = () => {
           </div>
           <div className="flex justify-center">
           <ul class="list-disc ">
-            <li className="text-slate-100 text-xl py-1">Completed a comprehensive Technical Degree in Informatics & Programming.</li>
-            <li className="text-slate-100 text-xl py-1">Studied programming languages like Java, PhP, JavaScript and C#</li>
-            <li className="text-slate-100 text-xl py-1">6-month internship experience, gaining real-world insights and practical skills.</li>
-            <li className="text-slate-100 text-xl py-1">Demonstrated academic excellence with consistent high standing.</li>
-            <li className="text-slate-100 text-xl py-1">Successfully completed a capstone project showcasing innovative problem-solving.</li>
+            <li className="text-slate-100 text-xl py-1">Completed comprehensive Technical Degree in Informatics & Programming.</li>
+            <li className="text-slate-100 text-xl py-1">Studied programming languages like Java, PhP, JavaScript and C#.</li>
+            <li className="text-slate-100 text-xl py-1">6-month internship for real-world experience.</li>
+            <li className="text-slate-100 text-xl py-1">Proficient in frameworks: React, React Native, CodeIgniter, and Bootstrap.</li>
+           
 
           </ul>
           </div>
-        
+          <div className="pt-12">
+          <PhotoMesh mesh={"photoFrame"} canvas={"photo"}></PhotoMesh>
+          <canvas className={"photo "}></canvas>
+          </div>
+          
         </div>
         <div class="col-span-2 px-10">
           <p class='text-slate-100 text-5xl font-semibold text-center'>VIA University</p>

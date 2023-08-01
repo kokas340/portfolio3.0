@@ -51,7 +51,7 @@ const IntroMesh = () => {
 
     // Resize
     window.addEventListener('resize', () => {
-      sizes.width = window.innerWidth ;
+      sizes.width = window.innerWidth/1.6 ;
       sizes.height = window.innerHeight ;
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();

@@ -1,7 +1,7 @@
 const Menu = () => {
     return (
         <>
-            <ul class=" bottom-0 left-0 ">
+            <ul class="  md:flex md:flex-row gap-8 py-2 xl:flex-col 	">
                 <li class="cursor-pointer hover:text-blue-500 about text-4xl  mb-2">
                     <a href="#about">About</a>
                 </li>
