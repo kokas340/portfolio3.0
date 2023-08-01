@@ -20,13 +20,14 @@ const ProjectMesh = (props) => {
     // Set canvas size to match the container size
     const containerRect = container.getBoundingClientRect();
     canvas.width = containerRect.width;
-    canvas.height = containerRect.height;
+    canvas.height = Math.max(containerRect.height, 300);
 
     // Sizes
     const sizes = {
       width: containerRect.width,
-      height: containerRect.height,
+      height: Math.max(containerRect.height, 300)
     };
+
    // Camera && Controls
     const { camera, controls } = createCamera(sizes,canvas,6.3,0,20,0,0.1,1,1.5,1.55);
     scene.add(camera);

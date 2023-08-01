@@ -26,7 +26,7 @@ const Projects = () => {
         <div class="col-span-2 pt-12 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300"
         >
           <a className='z-50' href="https://github.com/kokas340/chess" target="_blank">
-            <div className="">
+            <div className="xl:h-160">
               <ProjectMesh mesh={"chess"} canvas={"webglChess"}></ProjectMesh>
               <canvas className={"webglChess"}></canvas>
             </div>

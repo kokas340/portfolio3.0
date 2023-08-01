@@ -8,7 +8,7 @@ const Intro = () => {
       <div class="col-span-2">
         <p className='text-slate-100 text-8xl font-bold text-center py-5 introText'>Jack Spinola</p>
         <p className='text-slate-100 text-6xl font-semibold text-center introText mb-12'>Software Developer</p>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 2xl:grid-cols-3">
           <div className="flex justify-end col-span-2 gap-8 mt-6">
             <SocialLinks/>
           </div>

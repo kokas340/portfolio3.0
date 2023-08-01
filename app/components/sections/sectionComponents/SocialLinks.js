@@ -3,10 +3,11 @@ import Image from 'next/image'
 const SocialLinks = () => {
   return (
     <>
-     <a href="https://www.linkedin.com/in/jack-spinola-0a835927b/" target="_blank" className='z-2 px-2 li'>
+     <a href="https://www.linkedin.com/in/jack-spinola-0a835927b/" target="_blank" className='z-2 px-2 li '>
               <Image
                 src="/ld.png"
                 alt="linkedin"
+                className='hover:-translate-y-1 hover:scale-110  duration-150'
                 width={65}
                 height={65}
               />
@@ -15,6 +16,7 @@ const SocialLinks = () => {
               <Image
                 src="/github.png"
                 alt="github"
+                className='hover:-translate-y-1 hover:scale-110  duration-150'
                 width={65}
                 height={65}
               />
@@ -23,6 +25,7 @@ const SocialLinks = () => {
               <Image
                 src="/mail.png"
                 alt="email"
+                className='hover:-translate-y-1 hover:scale-110  duration-150'
                 width={65}
                 height={65}
               />
@@ -31,6 +34,7 @@ const SocialLinks = () => {
               <Image
                 src="/whats.png"
                 alt="whatsApp"
+                className='hover:-translate-y-1 hover:scale-110  duration-150'
                 width={65}
                 height={65}
               />

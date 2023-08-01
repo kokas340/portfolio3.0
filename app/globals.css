@@ -128,3 +128,13 @@ svg {
   75% { stroke: #78325a; }
   99% { stroke: #78325a; }
 }
+
+
+.navbarr {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgb(0, 0, 0,0);
+  padding: 10px;
+  font-size: 20px;
+}
