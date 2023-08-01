@@ -24,8 +24,8 @@ const PhotoMesh = (props) => {
 
     // Sizes
     const sizes = {
-      width: window.innerWidth /2.5,
-      height: window.innerHeight/2.4 ,
+      width: window.innerWidth,
+      height: window.innerHeight/2.8 ,
     };
 
    // Camera && Controls
@@ -34,7 +34,7 @@ const PhotoMesh = (props) => {
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-    renderer.setClearColor(0x000000, 0);//make bg transparent
+    renderer.setClearColor(0x00000, 0);//make bg transparent
     renderer.setSize(sizes.width, sizes.height);
 
     //Lights
@@ -56,10 +56,10 @@ const PhotoMesh = (props) => {
 
     // Resize
     window.addEventListener('resize', () => {
-      const newContainerRect = container.getBoundingClientRect();
-      sizes.width = newContainerRect.width;
-      sizes.height = Math.max(newContainerRect.height, 300);
-
+     
+      sizes.width = window.innerWidth ,
+      sizes.height =window.innerHeight/2
+  
       // Update camera aspect ratio
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();

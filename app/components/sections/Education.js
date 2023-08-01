@@ -6,8 +6,8 @@ const Education = () => {
       <div className="w-screen titlePosition">
         <p className='text-slate-100 text-8xl font-bold text-center py-5'>Education</p>
       </div>
-      <div class="grid grid-cols-1 xl:grid-cols-4   px-12 w-screen  xl:h-screen ">
-        <div class="col-span-2 px-10 ">
+      <div class="grid grid-cols-1 2xl:grid-cols-4   px-12 w-screen  2xl:h-screen ">
+        <div class="col-span-2 px-2 ">
           <p className='text-slate-100 text-5xl font-semibold text-center'>Cristóvão Colombo</p>
           <div className="py-10 flex justify-center ">
           <p className="text-slate-100 text-2xl font-semibold">Technical Degree in Informatics & Programming | 2018 - 2021</p>
@@ -22,8 +22,8 @@ const Education = () => {
 
           </ul>
           </div>
-          <div className="pt-12">
-          <PhotoMesh mesh={"photoFrame"} canvas={"photo"}></PhotoMesh>
+          <div className="flex justify-center pt-12 ">
+          <PhotoMesh mesh={"photoFrame"} canvas={"photo"} className=""></PhotoMesh>
           <canvas className={"photo "}></canvas>
           </div>
           
