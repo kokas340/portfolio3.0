@@ -23,7 +23,7 @@ export default function Home() {
   }, [loading]);
 
   return (
-    <main class="font-mono snap-y snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
+    <main class="font-mono xl:snap-y xl:snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
       <section class="snap-start  w-screen h-screen relative">
         <div
           className={`absolute top-0 left-0 w-full h-full flex justify-center items-center bg-teal-800 z-10 transition-opacity duration-500 ease-in-out ${loading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'

@@ -14,13 +14,19 @@ const ProjectMesh = (props) => {
     // Scene
     const scene = new THREE.Scene();
     //Canvas
-    const canvas = document.querySelector('.'+props.canvas);
+    const canvas = document.querySelector('.' + props.canvas);
+    const container = canvas.parentElement;
+
+    // Set canvas size to match the container size
+    const containerRect = container.getBoundingClientRect();
+    canvas.width = containerRect.width;
+    canvas.height = containerRect.height;
+
     // Sizes
     const sizes = {
-      width: window.innerWidth/3 ,
-      height: window.innerHeight/3 ,
+      width: containerRect.width,
+      height: containerRect.height,
     };
-
    // Camera && Controls
     const { camera, controls } = createCamera(sizes,canvas,6.3,0,20,0,0.1,1,1.5,1.55);
     scene.add(camera);
@@ -38,22 +44,27 @@ const ProjectMesh = (props) => {
     scene.add(pointLight);
 
     
-    const loadModel = () => {
-      try {
-        loaderMesh(scene, props.mesh, -1.2,0 ,false);
-      } catch (error) {
-        console.error('Error loading model:', error);
-      }
-    };
-    loadModel();
+    loaderMesh(scene, props.mesh, -1.2, 0, false)
+    .then(() => {
+      // Render the scene after the model is loaded
+      renderer.render(scene, camera);
+    })
+    .catch((error) => {
+      console.error('Error loading model:', error);
+    });
 
     // Resize
     window.addEventListener('resize', () => {
-      sizes.width = window.innerWidth/3 ;
-      sizes.height = window.innerHeight/3 ;
+      const newContainerRect = container.getBoundingClientRect();
+      sizes.width = newContainerRect.width;
+      sizes.height = Math.max(newContainerRect.height, 300);
+
+      // Update camera aspect ratio
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
-      renderer.setSize(sizes.width, sizes.height);
+
+      // Update renderer size
+      renderer.setSize(sizes.width, sizes.height); 
     });
 
     // Animation Loop

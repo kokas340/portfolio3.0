@@ -7,15 +7,15 @@ const Projects = () => {
       <div className="h-28">
         <p className=' text-slate-100 text-6xl font-bold text-center  pt-12'>Projects</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-6  pt-12  w-screen  h-screen ">
+      <div class="grid grid-cols-1 xl:grid-cols-6  pt-12  w-screen  h-screen ">
         <div class="col-span-2 pt-12 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
         <a className='z-50' href="https://www.rigacup.lv/" target="_blank">
-          <div>
+          <div className="bg-red-400 flex justify-center">
             <ProjectMesh mesh={"riga"} canvas={"webglChess2"}></ProjectMesh>
-            <canvas className={"webglChess2"}></canvas>
+            <canvas className={"webglChess2 bg-red-700"}></canvas>
           </div>
           <div className="pt-4  flex justify-center ">
-            <div className="w-3/4">
+            <div className="w-5/6">
               <p className='text-slate-100 text-4xl font-semibold text-center pt-6'>Riga Cup</p>
               <p className='text-slate-100 text-2xl  text-center pt-9 px-12 pl-4 '>I developed the backend for this system managing all the tournaments and teams.</p>
             </div>
@@ -43,7 +43,7 @@ const Projects = () => {
           <a className='z-50' href="https://github.com/kokas340/FirebaseChat" target="_blank">
             <div>
               <ProjectMesh mesh={"phone"} canvas={"webglPhone"}></ProjectMesh>
-              <canvas className={"webglPhone"}></canvas>
+              <canvas  className={"webglPhone "}></canvas>
             </div>
             <div className="pt-4  flex justify-center ">
               <div className="w-3/4">
