@@ -2,23 +2,46 @@ import EpccMesh from "../mesh/EpccMesh";
 
 const Education = () => {
   return (
-
-    <div class="grid grid-cols-1 md:grid-cols-5   px-12 w-screen  h-screen ">
-      <div class="col-span-2">
+    <>
+      <div className="w-screen titlePosition">
         <p className='text-slate-100 text-8xl font-bold text-center py-5'>Education</p>
-        <p className='text-slate-100 text-5xl font-semibold text-center'>Cristóvão Colombo</p>
-        <div className=" ">
-        <EpccMesh></EpccMesh>
-        <canvas className={"webgl3"}></canvas>
+      </div>
+      <div class="grid grid-cols-1 xl:grid-cols-4   px-12 w-screen  xl:h-screen ">
+        <div class="col-span-2 px-10 ">
+          <p className='text-slate-100 text-5xl font-semibold text-center'>Cristóvão Colombo</p>
+          <div className="py-10 flex justify-center ">
+          <p className="text-slate-100 text-2xl font-semibold">Technical Degree in Informatics & Programming | 2018 - 2021</p>
+          </div>
+          <div className="flex justify-center">
+          <ul class="list-disc ">
+            <li className="text-slate-100 text-xl py-1">Completed a comprehensive Technical Degree in Informatics & Programming.</li>
+            <li className="text-slate-100 text-xl py-1">Studied programming languages like Java, PhP, JavaScript and C#</li>
+            <li className="text-slate-100 text-xl py-1">6-month internship experience, gaining real-world insights and practical skills.</li>
+            <li className="text-slate-100 text-xl py-1">Demonstrated academic excellence with consistent high standing.</li>
+            <li className="text-slate-100 text-xl py-1">Successfully completed a capstone project showcasing innovative problem-solving.</li>
+
+          </ul>
+          </div>
+        
         </div>
-     
+        <div class="col-span-2 px-10">
+          <p class='text-slate-100 text-5xl font-semibold text-center'>VIA University</p>
+          <div className="py-10 flex justify-center">
+              <p class="text-slate-100 text-2xl font-semibold">Bachelor's Degree in Software Engineering | 2022 - 2025</p>
+          </div>
+          <div className="flex justify-center">
+          <ul class="list-disc">
+            <li class="text-slate-100 text-xl py-1">Pursuing a Bachelor's Degree in Software Engineering at VIA University.</li>
+            <li class="text-slate-100 text-xl py-1">Focused on developing expertise in software development and engineering principles.</li>
+            <li class="text-slate-100 text-xl py-1">Committed to gaining hands-on experience and applying theoretical knowledge.</li>
+            <li class="text-slate-100 text-xl py-1">Actively engaged in academic projects to enhance problem-solving abilities.</li>
+            <li class="text-slate-100 text-xl py-1">Eager to contribute to innovative solutions and advancements in the field.</li>
+          </ul>
+        </div>
+        </div>
       </div>
-      <div class="col-span-">
-      <p className='text-slate-100 text-8xl font-bold text-center py-5'></p>
-        <p className='text-slate-100 text-5xl font-semibold text-center'>VIA University</p>
-       
-      </div>
-    </div>
+    </>
+
   );
 };
 

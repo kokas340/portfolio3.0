@@ -4,8 +4,8 @@ import Menu from "./sectionComponents/Menu";
 
 const Intro = () => {
   return (
-    <div class="grid grid-cols-1 md:grid-cols-5    w-screen  h-screen flex items-center justify-center">
-      <div class="col-span-2">
+    <div class="grid grid-cols-1 md:grid-cols-6    w-screen  h-screen flex items-center justify-center">
+      <div class="col-span-3">
         <p className='text-slate-100 text-8xl font-bold text-center py-5 introText'>Jack Spinola</p>
         <p className='text-slate-100 text-6xl font-semibold text-center introText mb-12'>Software Developer</p>
         <div className="grid grid-cols-1 2xl:grid-cols-3">

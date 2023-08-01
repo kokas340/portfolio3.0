@@ -10,9 +10,9 @@ const Projects = () => {
       <div class="grid grid-cols-1 xl:grid-cols-6  pt-12  w-screen  h-screen ">
         <div class="col-span-2 pt-12 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
         <a className='z-50' href="https://www.rigacup.lv/" target="_blank">
-          <div className="bg-red-400 flex justify-center">
+          <div className="flex justify-center">
             <ProjectMesh mesh={"riga"} canvas={"webglChess2"}></ProjectMesh>
-            <canvas className={"webglChess2 bg-red-700"}></canvas>
+            <canvas className={"webglChess2"}></canvas>
           </div>
           <div className="pt-4  flex justify-center ">
             <div className="w-5/6">
