@@ -1,6 +1,6 @@
 # My Portfolio
 
-![Portfolio Preview](portfolio_preview.png) <!-- Replace `portfolio_preview.png` with a screenshot or image representing your portfolio -->
+![Portfolio Preview](https://github.com/kokas340/portfolio3.0/blob/main/public/Screenshot.png) <!-- Replace `portfolio_preview.png` with a screenshot or image representing your portfolio -->
 
 Welcome to my portfolio repository! This repository contains the code for my personal portfolio website, showcasing my skills, projects, and experiences as a software developer. Below, you'll find an overview of the contents and features of my portfolio.
 
