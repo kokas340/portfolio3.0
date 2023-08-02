@@ -7,7 +7,7 @@ const SocialLinks = () => {
               <Image
                 src="/ld.png"
                 alt="linkedin"
-                className='hover:-translate-y-1 hover:scale-110  duration-150'
+                className='hover:-translate-y-1 hover:scale-110  duration-150 '
                 width={65}
                 height={65}
               />
