@@ -25,7 +25,7 @@ const PhotoMesh = (props) => {
     // Sizes
     const sizes = {
       width: window.innerWidth,
-      height: window.innerHeight/2.8 ,
+      height: window.innerHeight/2.3 ,
     };
 
    // Camera && Controls
@@ -57,8 +57,8 @@ const PhotoMesh = (props) => {
     // Resize
     window.addEventListener('resize', () => {
      
-      sizes.width = window.innerWidth ,
-      sizes.height =window.innerHeight
+      sizes.width = window.innerWidth ;
+      sizes.height =window.innerHeight/2.3 ;
   
       // Update camera aspect ratio
       camera.aspect = sizes.width / sizes.height;

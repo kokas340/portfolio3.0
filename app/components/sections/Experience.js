@@ -44,7 +44,7 @@ const Experience = () => {
             <li className='py-1'>🌐 Contributing to a safer environment through secure transaction apps during COVID-19 restrictions.</li>
           </ul>
          
-          <div className='flex flex-row justify-center pt-10'>
+          <div className='flex flex-row justify-center pt-10 lg:gap-4 pb-10'>
             <img
               class="rounded-full mx-2"
               src="/sb.png"
@@ -80,7 +80,6 @@ const Experience = () => {
               height={60}
               title="Node.Js"
               alt="Node.Js" />
-           
               <img
               class="rounded-full mx-2"
               src="/sql.png"
