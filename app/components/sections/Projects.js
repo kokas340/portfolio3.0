@@ -57,6 +57,13 @@ const Projects = () => {
               height={60}
               title="Code Igniter"
               alt="Code Igniter" />
+              <img
+              class="rounded-full mx-2"
+              src="/sql.png"
+              width={60}
+              height={60}
+              title="SQL"
+              alt="SQL" />
           </div>
         </div>
 
@@ -129,3 +136,9 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+
+
+
+//ADD KRIS ANIMATION
