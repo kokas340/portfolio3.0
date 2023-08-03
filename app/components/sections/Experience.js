@@ -1,6 +1,7 @@
 
 
 import Image from 'next/image';
+import PhoneMesh from '../mesh/PhoneMesh';
 const Experience = () => {
   return (
     <>
@@ -53,7 +54,8 @@ c
             </p>
         </div>
         <div className="col-span-3">
-
+            <PhoneMesh mesh={"phonessr"} canvas={"phonessr"}></PhoneMesh>
+            <canvas className={"phonessr "}></canvas>
         </div>
       </div>
     </>
