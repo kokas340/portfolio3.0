@@ -33,20 +33,62 @@ const Experience = () => {
 
           </div>
           <p className='text-slate-100 text-xl py-1'>
-  As a Software Development Intern at GoClick, I engaged in dynamic projects amid COVID-19 challenges, including a cutting-edge Supermarket Delivery App. My role showcased growth through:
-</p>
-<ul className="list-inside text-slate-100 text-lg font-normal list-none pt-5 px-5 ">
-  <li className='py-1'>🚀 Driving innovative Supermarket Delivery App development, addressing pandemic needs and reducing physical interactions.</li>
-  <li className='py-1'>📈 Demonstrating adaptability with technologies like Spring Boot, MySQL, React Native, Node.Js, Stripe, and AWS.</li>
-  <li className='py-1'>🛍️ Playing a pivotal role in crafting user-friendly shopping experiences amidst emerging challenges.</li>
-  <li className='py-1'>💼 Excelling within cross-functional teams, translating concepts into real-world applications.</li>
-  <li className='py-1'>🗣️ Effectively communicating project progress, enhancing transparency and accountability.</li>
-  <li className='py-1'>🌐 Contributing to a safer environment through secure transaction apps during COVID-19 restrictions.</li>
-</ul>
-
-          <p className="text-slate-100 text-lg font-normal text-center">
-            Technologies used: Spring Boot, MySQL, React Native, Node.Js, Stripe, AWS
+            As a Software Development Intern at GoClick, I engaged in dynamic projects amid COVID-19 challenges, including a cutting-edge Supermarket Delivery App. My role showcased growth through:
           </p>
+          <ul className="list-inside text-slate-100 text-lg font-normal list-none pt-5 px-5 ">
+            <li className='py-1'>🚀 Driving innovative Supermarket Delivery App development, addressing pandemic needs and reducing physical interactions.</li>
+            <li className='py-1'>📈 Demonstrating adaptability with technologies like Spring Boot, MySQL, React Native, Node.Js, Stripe, and AWS.</li>
+            <li className='py-1'>🛍️ Playing a pivotal role in crafting user-friendly shopping experiences amidst emerging challenges.</li>
+            <li className='py-1'>💼 Excelling within cross-functional teams, translating concepts into real-world applications.</li>
+            <li className='py-1'>🗣️ Effectively communicating project progress, enhancing transparency and accountability.</li>
+            <li className='py-1'>🌐 Contributing to a safer environment through secure transaction apps during COVID-19 restrictions.</li>
+          </ul>
+         
+          <div className='flex flex-row justify-center pt-10'>
+            <img
+              class="rounded-full mx-2"
+              src="/sb.png"
+              title="Spring Boot"
+              width={60}
+              height={60}
+              alt="Spring Boot" />
+               <img
+              class="rounded-full mx-2"
+              src="/react.png"
+              title="React Native"
+              width={60}
+              height={60}
+              alt="React Native" />
+            <img
+              class="rounded-full mx-2"
+              src="/aws.png"
+              width={60}
+              height={60}
+              title="AWS"
+              alt="AWS" />
+            <img
+              class="rounded-full mx-2"
+              src="/stripe.png"
+              width={60}
+              height={60}
+              title="Stripe"
+              alt="Stripe" />
+            <img
+              class="rounded-full mx-2"
+              src="/node.png"
+              width={60}
+              height={60}
+              title="Node.Js"
+              alt="Node.Js" />
+           
+              <img
+              class="rounded-full mx-2"
+              src="/sql.png"
+              width={60}
+              height={60}
+              title="SQL"
+              alt="SQL" />
+          </div>
         </div>
         <div className="col-span-3">
           <PhoneMesh mesh={"phonessr"} canvas={"phonessr"}></PhoneMesh>

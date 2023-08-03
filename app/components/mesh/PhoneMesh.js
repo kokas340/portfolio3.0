@@ -54,7 +54,7 @@ const PhoneMesh = (props) => {
     // Resize
     window.addEventListener('resize', () => {
       const newContainerRect = container.getBoundingClientRect();
-      sizes.width = newContainerRect.width;
+      sizes.width = window.width;
       sizes.height = Math.max(newContainerRect.height, 300);
 
       // Update camera aspect ratio
