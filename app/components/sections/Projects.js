@@ -138,7 +138,3 @@ const Projects = () => {
 export default Projects;
 
 
-
-
-
-//ADD KRIS ANIMATION

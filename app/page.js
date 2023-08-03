@@ -23,9 +23,9 @@ export default function Home() {
   }, [loading]);
 
   return (
-    <main class="font-mono xl:snap-y xl:snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
+    <main class="font-mono 2xl:snap-y 2xl:snap-mandatory h-screen overflow-scroll overflow-x-hidden loading scroll-smooth">
     
-      <section id="intro" class="xl:snap-start  xl:w-screen xl:h-screen relative">
+      <section id="intro" class="2xl:snap-start  2xl:w-screen 2xl:h-screen relative">
         <div
           className={`absolute top-0 left-0 w-full h-full flex justify-center items-center bg-teal-800 z-10 transition-opacity duration-500 ease-in-out ${loading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
             }`}
@@ -35,24 +35,24 @@ export default function Home() {
         <Intro />
       </section>
       <div >
-        <div className='navbarr hidden xl:block'>
+        <div className='navbarr hidden 2xl:block'>
         <Navbar ></Navbar>
         </div>
        
         
-      <section id="about" class="xl:snap-start  w-screen  xl:h-screen ">
+      <section id="about" class="2xl:snap-start  w-screen  2xl:h-screen ">
        
      
         <AboutMesh loading={loading} onLoadingComplete={handleLoadingComplete} />
         <canvas className={"webgl"}></canvas>
       </section>
-      <section id="education" class="xl:snap-start  w-screen xl:h-screen ">
+      <section id="education" class="2xl:snap-start  w-screen 2xl:h-screen ">
         <Education />
       </section>
-      <section id="experience" class="xl:snap-start  w-screen xl:h-screen ">
+      <section id="experience" class="2xl:snap-start  w-screen 2xl:h-screen ">
         <Experience />
       </section>
-      <section id="projects" class="xl:snap-start w-screen xl:h-screen ">
+      <section id="projects" class="2xl:snap-start w-screen 2xl:h-screen ">
         <Projects />
       </section>
       </div>
