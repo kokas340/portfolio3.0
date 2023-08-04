@@ -7,11 +7,17 @@ export const createCamera = (sizes, canvas,prespec,x,y,z,mx,px,my,py) => {
   camera.position.y = y;
   camera.position.z = z;
 
+
   const controls = new OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.enablePan = false;
   controls.enableZoom = false;
 
+  if (canvas.classList.contains('webgl')) { // Check if the canvas has the "webgl" class
+    controls.enableZoom = true;
+    controls.minDistance = 14; // Minimum distance the camera can be from the target
+    controls.maxDistance = 20; // Maximum distance the camera can be from the target
+  }
   // Limit the rotation angles
   controls.minAzimuthAngle = mx; // Minimum rotation angle in radians (45 degrees)
   controls.maxAzimuthAngle = px;  // Maximum rotation angle in radians (45 degrees)

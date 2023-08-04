@@ -53,7 +53,6 @@ const Experience = () => {
           </p>
           <ul className="list-inside text-slate-100 text-lg font-normal list-none pt-5 px-5 ">
             <li className='py-1'>🚀 Driving innovative Supermarket Delivery App development, addressing pandemic needs and reducing physical interactions.</li>
-            <li className='py-1'>📈 Demonstrating adaptability with technologies like Spring Boot, MySQL, React Native, Node.Js, Stripe, and AWS.</li>
             <li className='py-1'>🛍️ Playing a pivotal role in crafting user-friendly shopping experiences amidst emerging challenges.</li>
             <li className='py-1'>💼 Excelling within cross-functional teams, translating concepts into real-world applications.</li>
             <li className='py-1'>🗣️ Effectively communicating project progress, enhancing transparency and accountability.</li>
