@@ -37,7 +37,7 @@ const AboutMesh = ({ onLoadingComplete }) => {
     //here look
     const loadModel = async () => {
       try {
-        await loaderMesh(scene, "pcjack1", -Math.PI / 2, -3,false);
+        await loaderMesh(scene, "pcjack1", -Math.PI / 2, -3,false,0,0);
         onLoadingComplete();
       } catch (error) {
         console.error('Error loading model:', error);

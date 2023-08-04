@@ -8,26 +8,20 @@ import {loaderMesh} from './sceneElements/LoaderMesh';
 const PhoneMesh = (props) => {
   
   useEffect(() => {
-    // Scene
+   
+  
     const scene = new THREE.Scene();
     //Canvas
     const canvas = document.querySelector('.' + props.canvas);
-    const container = canvas.parentElement;
-
-    // Set canvas size to match the container size
-    const containerRect = container.getBoundingClientRect();
-    canvas.width = containerRect.width;
-    canvas.height = Math.max(containerRect.height, 300);
-
     // Sizes
     const sizes = {
-      width: containerRect.width,
-      height: Math.max(containerRect.height, 300)
+      width: window.innerWidth ,
+      height: window.innerHeight/1.5 ,
     };
 
    // Camera && Controls
-    const { camera, controls } = createCamera(sizes,canvas,6.3,0,20,0,0.6,1.8,1.5,1.5);
-    scene.add(camera);
+   const { camera, controls } = createCamera(sizes,canvas,8,0,0,20,-0.1,0.1,1,1.6);
+   scene.add(camera);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
@@ -42,7 +36,7 @@ const PhoneMesh = (props) => {
     scene.add(pointLight);
 
     
-    loaderMesh(scene, props.mesh, -1.2, 0, false)
+    loaderMesh(scene, props.mesh, -1.2, 0, false,-2,1)
     .then(() => {
       // Render the scene after the model is loaded
       renderer.render(scene, camera);
@@ -53,16 +47,21 @@ const PhoneMesh = (props) => {
 
     // Resize
     window.addEventListener('resize', () => {
-      const newContainerRect = container.getBoundingClientRect();
-      sizes.width = window.width;
-      sizes.height = Math.max(newContainerRect.height, 300);
-
-      // Update camera aspect ratio
+      if (sizes.width < 768) {
+        sizes.width = window.innerWidth ;
+        sizes.height = window.innerHeight/1.5 ;
+        const model = scene.getObjectByName(props.mesh);
+        if (model) {
+          model.position.x = 1; // Adjust this value to move the model to the right along the x-axis
+        }
+      }else{
+        sizes.width = window.innerWidth;
+        sizes.height = window.innerHeight/1.5;
+      }
+    
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
-
-      // Update renderer size
-      renderer.setSize(sizes.width, sizes.height); 
+      renderer.setSize(sizes.width, sizes.height);
     });
 
     // Animation Loop

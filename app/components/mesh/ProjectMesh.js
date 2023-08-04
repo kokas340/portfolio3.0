@@ -45,7 +45,7 @@ const ProjectMesh = (props) => {
     scene.add(pointLight);
 
     
-    loaderMesh(scene, props.mesh, -1.2, 0, false)
+    loaderMesh(scene, props.mesh, -1.2, 0, false,0,0)
     .then(() => {
       // Render the scene after the model is loaded
       renderer.render(scene, camera);

@@ -1,17 +1,33 @@
 
-
+import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import PhoneMesh from '../mesh/PhoneMesh';
 const Experience = () => {
+  const [isXLScreen, setIsXLScreen] = useState(false);
+
+  // Function to check if the screen size is below xl breakpoint
+  const checkWindowSize = () => {
+    setIsXLScreen(window.innerWidth < 1780); // 1280 is the xl breakpoint in Tailwind CSS
+  };
+
+  // Add event listener to check window size on component mount and resize
+  useEffect(() => {
+    checkWindowSize();
+    window.addEventListener("resize", checkWindowSize);
+
+    return () => {
+      window.removeEventListener("resize", checkWindowSize);
+    };
+  }, []);
   return (
     <>
       <div className='h-40 pt-10'>
         <p className="text-slate-100 text-6xl font-bold text-center py-5 pt-14">Work Experience</p>
 
       </div>
-      c
-      <div className="grid grid-cols-1 xl:grid-cols-6 w-screen h-sreen p-9 pt-12">
-        <div className="col-span-3">
+      
+      <div className={` ${isXLScreen ? " " : "grid grid-cols-1 xl:grid-cols-7"} w-screen h-sreen p-9 pt-12` }>
+        <div className="col-span-4">
 
           <div className='flex flex-row gap-5 justify-center md:mb-14 md:pb-14'>
             <div>
@@ -87,12 +103,14 @@ const Experience = () => {
               height={60}
               title="SQL"
               alt="SQL" />
-          </div>
+          </div> 
         </div>
+        {!isXLScreen && (
         <div className="col-span-3">
           <PhoneMesh mesh={"phonessr"} canvas={"phonessr"}></PhoneMesh>
           <canvas className={"phonessr "}></canvas>
         </div>
+        )}
       </div>
     </>
 

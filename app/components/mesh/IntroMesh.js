@@ -39,7 +39,7 @@ const IntroMesh = () => {
 
     const loadModel = () => {
       try {
-        loaderMesh(scene, "pcjack2", -Math.PI / 2, -3,false);
+        loaderMesh(scene, "pcjack2", -Math.PI / 2, -3,false,0,0);
       } catch (error) {
         console.error('Error loading model:', error);
       }
