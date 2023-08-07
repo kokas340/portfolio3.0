@@ -44,7 +44,7 @@ export default function Home() {
           <canvas className={"webgl"}></canvas>
         </section>
 
-        <section id="education" class="2xl:snap-start  w-screen 2xl:h-screen pt-12 px-12 ">
+        <section id="education" class="2xl:snap-start  w-screen 2xl:h-screen pt-12  ">
           <Education />
         </section>
 

@@ -23,9 +23,11 @@ const PhotoMesh = (props) => {
     canvas.height = Math.max(containerRect.height*200, 700);
 
     // Sizes
+    const tacticalWinds2xl = 1536; // Custom 2xl breakpoint
+
     const sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight/2.3 ,
+      width: window.innerWidth >= tacticalWinds2xl ? window.innerWidth / 2 : window.innerWidth,
+      height: window.innerHeight / 2.3,
     };
 
    // Camera && Controls
@@ -56,16 +58,14 @@ const PhotoMesh = (props) => {
 
     // Resize
     window.addEventListener('resize', () => {
-     
-      sizes.width = window.innerWidth ;
-      sizes.height =window.innerHeight/2.3 ;
-  
-      // Update camera aspect ratio
+      sizes.width = window.innerWidth >= tacticalWinds2xl ? window.innerWidth / 2 : window.innerWidth;
+
+      sizes.height = window.innerHeight / 2.3;
+ 
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
 
-      // Update renderer size
-      renderer.setSize(sizes.width, sizes.height); 
+      renderer.setSize(sizes.width, sizes.height);
     });
 
     // Animation Loop
