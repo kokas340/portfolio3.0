@@ -1,4 +1,4 @@
-# My Portfolio
+# My Portfolio (In Progress)
 
 ![Portfolio Preview](https://github.com/kokas340/portfolio3.0/blob/main/public/Screenshot.png) <!-- Replace `portfolio_preview.png` with a screenshot or image representing your portfolio -->
 
